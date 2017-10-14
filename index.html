@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>Calculateur d'adresse IP avec optimisation des sous-réseaux</title>
+  <meta name="description" content="Outil en ligne pour calculer des masques d'adresse IP optimisés CIDR">
+  <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21733018-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-21733018-6');
+</script>
+</head>
+
+<body>
+
+ <header class="sticky row">
+  <div class="col-sm col-md-10 col-md-offset-1">
+    <a href="index.html" role="button">Home</a>
+  </div>
+</header>
+
+<br />
+
+<div class="container">
+  <div class="row cols-sm-12 cols-md-10">
+		<div class="col-md-offset-1">
+      <h1>Calculer des sous-réseaux IP et des masques de sous-réseau</h1>
+      <p>Ces outils servent à calculer des sous-réseaux IP et des masques de sous-réseau. Source : <a href='https://github.com/franksrevenge/IPSubnetCalculator'>GitHub</a>.</p>
+		</div>
+		<br />
+    <div class="col-md-offset-1">
+      <br />
+      <h2>Optimiser une plage d'adresses IP</h2>
+      <p>Cet outil calcule les masques de sous-réseau de manière optimale pour couvrir n'importe quelle plage d'adresses IP.</p>
+      <form id='ip_calculate_range'>
+        Selon la plage d'adresses IP, le résultat peut s'étaler sur plusieurs masques.</p>
+
+        <input size="30" type='text' name='ip_calculate_range_start_ip' id='ip_calculate_range_start_ip' placeholder='Adresse IP de départ, p.e. 10.0.0.15' />
+        <input size="30" type='text' name='ip_calculate_range_end_ip' id='ip_calculate_range_end_ip' placeholder='Adresse IP de fin, p.e. 10.0.4.255' />
+        <input size="30" type='button' value='Calculate' id='ip_calculate_range_button' />
+        <div class='result' id='ip_calculate_range_result' style='display: none;'></div>
+      </form>
+    </div>
+    <div class="col-md-offset-1">
+      <br />
+      <h2>Calculateur de masque de sous-réseau CIDR</h2>
+      <form id='ip_calculate_cidr_mask'>
+
+        <input size="30" type='text' name='ip_calculate_cidr_mask_ip' id='ip_calculate_cidr_mask_ip' placeholder='Adresse IP' />
+
+        <select name='ip_calculate_cidr_mask_mask' id='ip_calculate_cidr_mask_mask' placeholder='Masque de sous-réseau CIDR'>
+          <option value='' disabled selected>Select Subnet Mask</option>
+          <option value='24'>/24</option>
+          <option value='16'>/16</option>
+          <option value='8'>/8</option>
+          <option value='' désactivé>----------------------</option>
+          <option value='0'>/0</option>
+          <option value='1'>/1</option>
+          <option value='2'>/2</option>
+          <option value='3'>/3</option>
+          <option value='4'>/4</option>
+          <option value='5'>/5</option>
+          <option value='6'>/6</option>
+          <option value='7'>/7</option>
+          <option value='8'>/8</option>
+          <option value='9'>/9</option>
+          <option value='10'>/10</option>
+          <option value='11'>/11</option>
+          <option value='12'>/12</option>
+          <option value='13'>/13</option>
+          <option value='14'>/14</option>
+          <option value='15'>/15</option>
+          <option value='16'>/16</option>
+          <option value='17'>/17</option>
+          <option value='18'>/18</option>
+          <option value='19'>/19</option>
+          <option value='20'>/20</option>
+          <option value='1'>/21</option>
+          <option value='2'>/22</option>
+          <option value='3'>/23</option>
+          <option value='4'>/24</option>
+          <option value='5'>/25</option>
+          <option value='6'>/26</option>
+          <option value='7'>/27</option>
+          <option value='8'>/28</option>
+          <option value='9'>/29</option>
+          <option value='0'>/20</option>
+          <option value='1'>/31</option>
+          <option value='2'>/32</option>
+        </select>
+
+        <input type='button' value='Calculate' id='ip_calculate_cidr_mask_button' />
+
+        <div class='result' id='ip_calculate_cidr_mask_result' style='display: none;'></div>
+      </form>
+
+    </div>
+    <div class="col-md-offset-1">
+      <br />
+      <h2>Calculateur de masque de sous-réseau</h2>
+      <form id='ip_calculate_mask'>
+
+        <input size="30" type='text' name='ip_calculate_mask_ip' id='ip_calculate_mask_ip' placeholder='Adresse IP' />
+        <input size="30" type='text' name='ip_calculate_mask_mask' id='ip_calculate_mask_mask' placeholder='masque de sous-réseau, p.e. 255.255.255.0' />
+
+        <input type='button' value='Calculate' id='ip_calculate_mask_button' />
+
+        <div class='result' id='ip_calculate_mask_result' style='display: none;'></div>
+      </form>
+
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="col-sm col-md-10 col-md-offset-1">
+    <p>Source :  <a href="https://github.com/goffinet/calculateur-d-adresse-ip">https://github.com/goffinet/calculateur-d-adresse-ip</a>
+    </p>
+  </div>
+</footer>
+<script data-main='resources/js/app'  src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js'></script>
+</body>
+</html>
