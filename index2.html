@@ -1,27 +1,25 @@
-<!DOCTYPE html>
-<html manifest="cache.appcache">
-<html lang="fr">
+!DOCTYPE html>
+<html>
+<!-- manifest="cache.appcache">-->
+<!-- UNCOMMENT FOR OFFLINE VIEWING -->
 
 <head>
-  <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8" />
-  <title>Calculateur d'adresse IP2</title>
-  <meta name="description" content="Outil en ligne pour calculer des masques d'adresse IP optimisés CIDR">
-  <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+    <title>Subnetting Calculator</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv='cleartype' content='on'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="Subnetting Calculator">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Eric Lagergren">
-    <!--[if IE lte 7]>
-    <meta HTTP-EQUIV="REFRESH" content="0; url=http://subnetting.ericlagergren.com/ie">
-    <script type="text/javascript">
-    window.location = "http://subnetting.ericlagergren/ie";
-    </script>
-    <![endif]-->
+    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
 </head>
 
 <body>
-    <form name="valuebox" onsubmit="performCalculations(); return false;">
+    <form name="form" onsubmit="performCalculations(); return false;">
         <div class="left">
             <h1>Subnetting Calculator</h1>
             <nav><a href="/about">about </a><a href="/license">license </a><a href="https://www.github.com/EricLagerg/cidr-javascript/">source </a><a href="javascript:void(0)" onclick="window.location.reload(true);">refresh</a>
@@ -32,8 +30,6 @@
             <label for="submask">Submask or CIDR or Num Req Hosts</label>
             <input class="clearfix" type="text" name="ip" placeholder="192.168.1.1" />
             <label for="ip">IPv4 Address</label>
-            <!--<input class="clearfix" type="number" name="split" placeholder="4" />
-            <label for="split"># Networks (default: 1)</label>-->
             <input class="clearfix" type="submit" value="submit" />
         </div>
         <div class="right" id="info">
@@ -58,12 +54,16 @@
                         <td class="dl" id="tablewildcardmask"></td>
                     </tr>
                     <tr>
-                        <td class="dl">Submask to Binary</td>
-                        <td class="dl" id="tablebinarysub"></td>
+                        <td class="dl">Binary</td>
+                        <td class="dl" id="tablebinary"></td>
                     </tr>
                     <tr>
                         <td class="dl"># Hosts</td>
                         <td class="dl" id="tablenumhosts"></td>
+                    </tr>
+                    <tr>
+                        <td class="dl"># Subnets</td>
+                        <td class="dl" id="tablenumsubnets"></td>
                     </tr>
                     <tr>
                         <td class="dl">IP Class</td>
@@ -72,10 +72,6 @@
                     <tr>
                         <td class="dl">IP to Hex</td>
                         <td class="dl" id="tableiptohex"></td>
-                    </tr>
-                    <tr>
-                        <td class="dl">IP to Binary</td>
-                        <td class="dl" id="tablebinaryip"></td>
                     </tr>
                     <tr>
                         <td class="dl">Network ID</td>
