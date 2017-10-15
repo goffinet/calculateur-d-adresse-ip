@@ -44,9 +44,9 @@
       <form id='ip_calculate_range'>
         Selon la plage d'adresses IP, le résultat peut s'étaler sur plusieurs masques.</p>
 
-        <input size="30" type='text' name='ip_calculate_range_start_ip' id='ip_calculate_range_start_ip' placeholder='Adresse IP de départ, p.e. 10.0.0.15' />
-        <input size="30" type='text' name='ip_calculate_range_end_ip' id='ip_calculate_range_end_ip' placeholder='Adresse IP de fin, p.e. 10.0.4.255' />
-        <input size="30" type='button' value='Calculate' id='ip_calculate_range_button' />
+        <input type='text' name='ip_calculate_range_start_ip' id='ip_calculate_range_start_ip' placeholder='Adresse IP de départ, p.e. 10.0.0.15' />
+        <input type='text' name='ip_calculate_range_end_ip' id='ip_calculate_range_end_ip' placeholder='Adresse IP de fin, p.e. 10.0.4.255' />
+        <input type='button' value='Calculate' id='ip_calculate_range_button' />
         <div class='result' id='ip_calculate_range_result' style='display: none;'></div>
       </form>
     </div>
@@ -55,7 +55,7 @@
       <h2>Calculateur de masque de sous-réseau CIDR</h2>
       <form id='ip_calculate_cidr_mask'>
 
-        <input size="30" type='text' name='ip_calculate_cidr_mask_ip' id='ip_calculate_cidr_mask_ip' placeholder='Adresse IP' />
+        <input type='text' name='ip_calculate_cidr_mask_ip' id='ip_calculate_cidr_mask_ip' placeholder='Adresse IP' />
 
         <select name='ip_calculate_cidr_mask_mask' id='ip_calculate_cidr_mask_mask' placeholder='Masque de sous-réseau CIDR'>
           <option value='' disabled selected>Select Subnet Mask</option>
@@ -109,8 +109,8 @@
       <h2>Calculateur de masque de sous-réseau</h2>
       <form id='ip_calculate_mask'>
 
-        <input size="30" type='text' name='ip_calculate_mask_ip' id='ip_calculate_mask_ip' placeholder='Adresse IP' />
-        <input size="30" type='text' name='ip_calculate_mask_mask' id='ip_calculate_mask_mask' placeholder='masque de sous-réseau, p.e. 255.255.255.0' />
+        <input type='text' name='ip_calculate_mask_ip' id='ip_calculate_mask_ip' placeholder='Adresse IP' />
+        <input type='text' name='ip_calculate_mask_mask' id='ip_calculate_mask_mask' placeholder='masque de sous-réseau, p.e. 255.255.255.0' />
 
         <input type='button' value='Calculate' id='ip_calculate_mask_button' />
 
