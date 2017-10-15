@@ -28,7 +28,7 @@ function( $, IpSubnetCalculator )
 				{
 					var i;
 					var msg = '<h2>Résultat</h2>' +
-								'<table>' +
+								'<table class="scrollable">' +
 								'<thead><tr><td>IP</td><td>Préfixe</td><td>Masque de sous-réseau</td></tr></thead>' +
 								'<tfoot><tr><td>IP</td><td>Préfixe</td><td>Masque de sous-réseau</td></tr></tfoot>';
 
@@ -64,7 +64,7 @@ function( $, IpSubnetCalculator )
 				else
 				{
 					var msg = '<h2>Résultat</h2>' +
-								'<table>' +
+								'<table class="scrollable">' +
 								'<thead><tr><td>Plage d&#39; adresses</td><td>Masque de sous-réseau</td><td>Taille de préfixe</td></tr></thead>' +
 								'<tbody>' +
 								'<tr>' +
@@ -95,7 +95,7 @@ function( $, IpSubnetCalculator )
 				else
 				{
 					var msg = '<h2>Résultat</h2>' +
-								'<table>' +
+								'<table class="scrollable">' +
 								'<thead><tr><td>Plage d&#39; adresses</td><td>Masque de sous-réseau</td><td>Taille de préfixe</td></tr></thead>' +
 								'<tbody>' +
 								'<tr>' +
