@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8" />
-  <title>Calculateur d'adresse IP avec optimisation des sous-réseaux</title>
+  <title>Calculateur d'adresse IP, de sous-réseaux et de super-réseaux</title>
   <meta name="description" content="Outil en ligne pour calculer des masques d'adresse IP optimisés CIDR">
   <link rel="shortcut icon" href="/favicon.png" type="image/png" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -52,7 +52,8 @@
     </div>
     <div class="col-md-offset-1">
       <br />
-      <h2>Calculateur de masque de sous-réseau CIDR</h2>
+      <h2>Calculateur de masque de super-réseau CIDR</h2>
+      <p>Le masque CIDR doit être inférieur au masque par défaut de l'adresse de classe.</p>
       <form id='ip_calculate_cidr_mask'>
 
         <input type='text' name='ip_calculate_cidr_mask_ip' id='ip_calculate_cidr_mask_ip' placeholder='Adresse IP' />
@@ -107,6 +108,7 @@
     <div class="col-md-offset-1">
       <br />
       <h2>Calculateur de masque de sous-réseau</h2>
+      <p>Calculateur classique avec masque en notation décimale</p>
       <form id='ip_calculate_mask'>
 
         <input type='text' name='ip_calculate_mask_ip' id='ip_calculate_mask_ip' placeholder='Adresse IP' />
