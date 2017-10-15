@@ -7,6 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv='cleartype' content='on'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="Subnetting Calculator">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="robots" content="index, follow">
+    <meta name="bitly-verification" content="7c235b444737" />
     <meta name="author" content="Eric Lagergren">
     <!--[if IE lte 7]>
     <meta HTTP-EQUIV="REFRESH" content="0; url=http://subnetting.ericlagergren.com/ie">
@@ -18,6 +25,27 @@
 </head>
 
 <body>
+    <div id="iphoneinstall" onclick="classList.toggle('open');" class="">
+
+
+        <p class="close">
+            <img class="cloze" src="/assets/cross.png">
+        </p>
+        <p>
+            Press the 'share' button below and then choose "Add to Home Screen". The app will then be installed as an icon, just like a regular app from the App Store.
+        </p>
+        <p>
+            <img class="share" src="/assets/iphone_share.png"> →
+            <img class="share shareHalf" src="/assets/download.png">
+        </p>
+        <br>
+        <p>
+            The mobile app will then be installed as an icon on your home screen.
+        </p>
+        <div class="top">
+            Download the mobile app for free.
+        </div>
+    </div>
     <form name="valuebox" onsubmit="performCalculations(); return false;">
         <div class="left">
             <h1>Subnetting Calculator</h1>
