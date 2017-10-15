@@ -3,15 +3,20 @@
 <!-- manifest="cache.appcache">-->
 <!-- UNCOMMENT FOR OFFLINE VIEWING -->
 
+
 <head>
     <title>Subnetting Calculator</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv='cleartype' content='on'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="Subnetting Calculator">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
-    <!--<link href="lib/cidr.css" rel="stylesheet">-->
+    <link href="/assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -86,10 +91,8 @@
         </div>
     </form>
     <div class="clearfix">
-      <a id="refresh" class="ux-actions clearfix" href="javascript:void(0)" onclick="window.location.reload(true);window.scroll(0,0);">REFRESH</a>
-  <a id="top" class="ux-actions clearfix" href="javascript:void(0)" onclick="window.scroll(0,0);">TO TOP</a>
+        <a id="refresh" class="ux-actions clearfix" href="javascript:void(0)" onclick="window.location.reload(true);window.scroll(0,0);">REFRESH</a>
+        <a id="top" class="ux-actions clearfix" href="javascript:void(0)" onclick="window.scroll(0,0);">TO TOP</a>
     </div>
-    <script src="lib/cidr.js"></script>
-</body>
-
+     <script src="/src/js/master.min.js"></script></body>
 </html>
