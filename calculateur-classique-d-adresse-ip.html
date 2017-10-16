@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>Calculateur classique d'adresse IP</title>
+  <meta name="description" content="Outil en ligne pour calculer des masques d'adresse IP optimisés CIDR">
+  <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21733018-9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-21733018-9');
+</script>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="row cols-sm-12 cols-md-10">
+    <div class="col-md-offset-1">
+      <p>Calculateur classique avec masque en notation décimale</p>
+      <form id='ip_calculate_mask'>
+
+        <input type='text' name='ip_calculate_mask_ip' id='ip_calculate_mask_ip' placeholder='Adresse IP' />
+        <input type='text' name='ip_calculate_mask_mask' id='ip_calculate_mask_mask' placeholder='masque de sous-réseau, p.e. 255.255.255.0' />
+
+        <input type='button' class="primary" value='Calculate' id='ip_calculate_mask_button' />
+
+        <div class='result' id='ip_calculate_mask_result' style='display: none;'></div>
+      </form>
+
+    </div>
+  </div>
+</div>
+<script data-main='resources/js/app'  src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js'></script>
+</body>
+</html>
